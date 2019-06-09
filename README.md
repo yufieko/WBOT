@@ -1,9 +1,9 @@
 # WBOT
 
-  [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal]][paypal-donations] 
+ [![Support me on Patreon][badge_patreon]][patreon] [![Buy me a book][badge_amazon]][amazon] [![PayPal][badge_paypal]][paypal-donations] 
 
 
-> A simple BOT for web.whatsapp
+> A simple Nodejs BOT for whatsapp web
 
 <a href="#preview">Preview</a> •
 <a href="#features">Features</a> •
@@ -16,7 +16,15 @@
 
 ## Preview
 
-![Screenshot gif](https://user-images.githubusercontent.com/6497827/50764700-988a2f80-1299-11e9-8fe3-eafc3e10149f.gif)
+### Quick preview
+![Screenshot gif](https://user-images.githubusercontent.com/6497827/58411958-1dcc8000-8093-11e9-8aeb-5747efe10266.gif)
+
+<!---
+### Full YouTube Video
+
+[![Video thumbnail](https://img.youtube.com/vi/y7LAbdoNBJA/0.jpg)](https://www.youtube.com/watch?v=y7LAbdoNBJA)
+
+-->
 
 ## Features
 
@@ -28,7 +36,7 @@
 
 macOS | Windows | Linux
 -----------------| ---| ---|
-[Download v0.5-beta](https://github.com/vasani-arpit/WBOT/releases/download/v0.5-beta/WBOT-mac-0.5.zip) | [Download v0.5-beta](https://github.com/vasani-arpit/WBOT/releases/download/v0.5-beta/WBOT-win-0.5.zip) | [Download v0.5-beta](https://github.com/vasani-arpit/WBOT/releases/download/v0.5-beta/WBOT-linux-0.5.zip)
+[Download v0.7-beta](https://github.com/vasani-arpit/WBOT/releases/download/v0.7-beta/wbot-mac-0.7.zip) | [Download v0.7-beta](https://github.com/vasani-arpit/WBOT/releases/download/v0.7-beta/wbot-linux-0.7.zip) | [Download v0.7-beta](https://github.com/vasani-arpit/WBOT/releases/download/v0.7-beta/wbot-win-0.7.zip)
 
 
 ## Supported Platforms
@@ -68,12 +76,11 @@ Basic Configuration is in bot.json file like replying to Hi, hello and happy bir
 This is where all the application related(node application behavior and such things) config will stay. will add more in future.
 
 - **headless** Whether to start chrome as headless or not. this is regarding #4. Apparently, Whatsapp doesn't allow headless instances.
-- **darkmode** Enables dark theme in Whatsapp web. Useless if you select headless true
 - **isGroupReply** Whether to send replies in group or not. If set to false Bot will not reply if message received in group chat.
 
 **bot**
 
-An array of object. Properties of Object are self explanatory. 
+An array of objects. Properties of Object are self explanatory. 
 
 - **Contains** If message has one of that word anywhere in the message
 - **exact** If message is exactly as one of the messages form array
@@ -83,6 +90,22 @@ An array of object. Properties of Object are self explanatory.
 **Blocked**
 
 Array of numbers with county code to which this bot will not reply to.
+
+**noMatch**
+
+Default reply message when no exact match found in BOT
+
+**smartreply**
+
+An object which contains suggestions and it's configs.
+
+- **suggestions** An Array of suggestions
+- **clicktosend** Whether to send or just write message when user clicks on suggestion
+
+here is how that looks
+
+![smart reply gif](https://user-images.githubusercontent.com/6497827/58412366-f1653380-8093-11e9-8427-1ca19235faed.gif)
+
 
 ## Technologies
 * [Node](https://nodejs.org/en/)
@@ -101,7 +124,7 @@ With that in mind, I know that WBOT would need to satisfy these criteria:
 * 🔒 Does not touch user’s data
 * 💰 Free! for personal use
 
-If you think WBOT delivers these, let me know by putting a star on this project 😉
+If you think WBOT delivers these, let me know by putting a star 🌟 on this project 😉
 
 
 ## FAQ
@@ -137,10 +160,19 @@ If you find an issue, please report it here. For everything else, please drop me
 [badge_paypal]: https://user-images.githubusercontent.com/6497827/53698092-42032280-3dfe-11e9-8054-1597c62d344e.png
 [badge_patreon]: https://user-images.githubusercontent.com/6497827/53698102-4af3f400-3dfe-11e9-9749-4104ceb6ea3c.png
 [badge_amazon]: https://user-images.githubusercontent.com/6497827/53698105-51826b80-3dfe-11e9-9e63-b14ad6ad7c19.png
+[twitter_logo]: https://user-images.githubusercontent.com/6497827/57843958-c30e6b00-77ec-11e9-97bd-dfbc800f96a9.png
+[telegram_logo]: https://user-images.githubusercontent.com/6497827/57844175-2ac4b600-77ed-11e9-8488-f2d45efa7497.png
 
 [patreon]: https://www.patreon.com/arpit_vasani
 [amazon]: http://amzn.in/iCUjhKZ
 [paypal-donations]: https://www.paypal.me/arpitvasani
+[twitter]: https://twitter.com/ArpitVasani
+[telegram]: http://t.me/Arpit_Vasani
 
 ## Legal
 This code is in no way affiliated with, authorized, maintained, sponsored or endorsed by WhatsApp or any of its affiliates or subsidiaries. This is an independent and unofficial software. Use at your own risk. **Commercial use of this code/repo is strictly prohibited.**
+
+## Contact Me
+
+[![Contact me on twitter][twitter_logo]][twitter]
+[![Contact me on telegram][telegram_logo]][telegram]
