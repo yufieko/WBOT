@@ -199,7 +199,7 @@ async function Main() {
         //TODO: avoid using delay and make it in a way that it would react to the event. 
         await utils.delay(10000);
         //console.log("loaded");
-        var output = await page.evaluate("localStorage['last-wid']");
+        var output = await page.evaluate("localStorage['last-wid-md']");
         //console.log("\n" + output);
         if (output) {
             spinner.stop("Looks like you are already logged in");
